@@ -5,4 +5,4 @@ applications:
   routes:
   - route: ps-pal-tracker-review.apps.chicken.pal.cfapps.io
   env:
-    WELCOME_MSG: Hello from the review environment
+    WELCOME_MSG: Hello from the review environment!
