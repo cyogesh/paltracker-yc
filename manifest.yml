@@ -2,7 +2,6 @@
 applications:
 - name: pal-tracker
   path: build/libs/pal-tracker.jar
-  routes:
-  - route: ps-pal-tracker-review.apps.chicken.pal.cfapps.io
+  routes: true
   env:
-    WELCOME_MSG: Hello from the review environment!
+    WELCOME_MSG: Hello from review environments
