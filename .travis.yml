@@ -13,6 +13,8 @@ jobs:
       language: java
       jdk: oraclejdk8
       install: skip
+      before_script:
+      - chmod +x gradlew
       script: ./gradlew clean build
       before_deploy:
         - git config --local user.name "Travis CI"
@@ -27,7 +29,7 @@ jobs:
       language: bash
       script:
         - echo "Downloading $RELEASE_TAG"
-        - wget -P build/libs https://github.com/$GITHUB_USERNAME/pal-tracker/releases/download/$RELEASE_TAG/pal-tracker.jar
+        - wget -P build/libs https://github.com/$GITHUB_USERNAME/paltracker-yc/releases/download/$RELEASE_TAG/pal-tracker.jar
       before_deploy:
         - echo "Deploying $RELEASE_TAG to review"
       deploy:
@@ -37,3 +39,4 @@ jobs:
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: review
+        skip_ssl_validation: true
