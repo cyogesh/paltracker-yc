@@ -3,6 +3,6 @@ applications:
 - name: pal-tracker2
   path: build/libs/pal-tracker.jar
   routes:
-  - route: ps.pal-tracker.review.apps.pal.cfapps.io
+  - route: ps-pal-tracker-review.cfapps.io
   env:
     WELCOME_MSG: Hello test for random route
